@@ -19,12 +19,12 @@ function displayResults(responseJson) {
 
   for (let i = 0; i < responseJson.data.length; i++) {
     //for each item, add html to results list
-
+    console.log("forloop runs");
     $("#results-list").append(
-      `<li><h3>${responseJson.data[i].fullname}</h3>
+      `<li><h3>${responseJson.data[i].fullName}</h3>
       <p>${responseJson.data[i].description}</p>
-      <h4> Park Location: ${responseJson.data[i].addresses.physical}
-      <a hfref='${responseJson.data[i].url}'>
+      
+      <a href='${responseJson.data[i].url}'>${responseJson.data[i].url}</a>
       </li>`
     );
   }
