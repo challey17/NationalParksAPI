@@ -16,11 +16,9 @@ function displayResults(responseJson) {
   console.log(responseJson);
   $("#results-list").empty();
   // iterate through the items array
+
   for (let i = 0; i < responseJson.data.length; i++) {
-    // for each video object in the items
-    //array, add a list item to the results
-    //list with the video title, description,
-    //and thumbnail
+    //for each item, add html to results list
 
     $("#results-list").append(
       `<li><h3>${responseJson.data[i].fullname}</h3>
@@ -30,9 +28,9 @@ function displayResults(responseJson) {
       </li>`
     );
   }
-
-  //display the results section
   $("#results").removeClass("hidden");
+  //display the results section
+
   console.log("displayResults running ok");
 }
 
